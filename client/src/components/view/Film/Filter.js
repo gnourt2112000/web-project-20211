@@ -57,7 +57,7 @@ const Filter = () => {
 
     
 
-    const filmsPerPage = 3;
+    const filmsPerPage = 15;
     const pagesVisited = pageNumber * filmsPerPage;
 
     const display = films

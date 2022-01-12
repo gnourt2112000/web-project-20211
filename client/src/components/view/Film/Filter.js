@@ -107,7 +107,7 @@ const Filter = () => {
                         display
                     }
                 </div>
-                <div className='mt-5'>
+                <div className='mt-5 text-center'>
                     <ReactPaginate
                         previousLabel={"Trước"}
                         nextLabel={"Sau"}

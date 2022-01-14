@@ -57,7 +57,7 @@ const Filter = () => {
 
     
 
-    const filmsPerPage = 15;
+    const filmsPerPage = 3;
     const pagesVisited = pageNumber * filmsPerPage;
 
     const display = films
@@ -107,7 +107,7 @@ const Filter = () => {
                         display
                     }
                 </div>
-                <div className='mt-5 text-center'>
+                <div className='mt-5'>
                     <ReactPaginate
                         previousLabel={"Trước"}
                         nextLabel={"Sau"}

@@ -32,7 +32,7 @@ const Header = () => {
                         {category.map(element =>{
                             return(
                                 <div key={element._id} className='tab-content'>
-                                    <a href={`/filter/category/${element.name}`}>{element.name}</a>
+                                    <Link to={`/filter/category/${element.name}`}>{element.name}</Link>
                                 </div>
                             )
                         })}
@@ -43,16 +43,16 @@ const Header = () => {
                         {years.map(element =>{
                             return(
                                 <div key={element._id} className='tab-content'>
-                                    <a href={`/filter/year/${element.name}`}>{element._id}</a>
+                                    <Link to={`/filter/year/${element.name}`}>{element._id}</Link>
                                 </div>
                             )
                         })}
                     </div>
                 </TabPane>
                 <TabPane tab="Lọc phim" key="3" >
-                    <a href='/filter'>
+                    <Link href='/filter'>
                         <button className='btn btn-secondary'>Đi đến trang lọc phim</button>
-                    </a>
+                    </Link>
                 </TabPane>
             </Tabs>
         </Menu>

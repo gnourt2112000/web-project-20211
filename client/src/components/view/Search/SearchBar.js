@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import {Link} from 'react-router-dom'
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
@@ -44,9 +44,9 @@ function SearchBar({ placeholder, data }) {
         <div className="dataResult">
           {filteredData.slice(0, 6).map((value, key) => {
             return (
-              <a key={value._id} className="dataItem" href={`/film/${value._id}`}>
+              <Link key={value._id} className="dataItem" to={`/film/${value._id}`}>
                 <p>{value.title} </p>
-              </a>
+              </Link>
             );
           })}
         </div>

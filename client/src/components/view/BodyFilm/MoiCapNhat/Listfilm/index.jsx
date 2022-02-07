@@ -12,8 +12,8 @@ function ListFilm(props) {
   const pagesVisited = pageNumber * filmsPerPage;
 
     const display = films.sort(
-      (a, b) =>
-        new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+      (b, a) =>
+        new Date(a.createdAt) - new Date(b.createdAt)
     )
     .slice(pagesVisited, pagesVisited + filmsPerPage)
     .map(film => (

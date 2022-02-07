@@ -50,7 +50,7 @@ const Header = () => {
                     </div>
                 </TabPane>
                 <TabPane tab="Lọc phim" key="3" >
-                    <Link href='/filter'>
+                    <Link to='/filter'>
                         <button className='btn btn-secondary'>Đi đến trang lọc phim</button>
                     </Link>
                 </TabPane>

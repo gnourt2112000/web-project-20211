@@ -1,5 +1,5 @@
 import {useState,useEffect,useContext} from 'react'
-import { useParams } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
 import { FilmContext } from '../../contexts/FilmContext';
 import { SubfilmContext } from '../../contexts/SubFilmContext';
 import { AuthContext } from '../../contexts/AuthContext';
@@ -119,7 +119,7 @@ const InfoFilm = () => {
                                             <div className="col-8 text-center">
                                                 {film.categories && film.categories.map(cate => {
                                                     return(
-                                                        <><button key={cate._id} className='btn btn-secondary btn-sm mb-1'><a href={`/filter/category/${cate.name}`}>{cate.name}</a></button>{' '}</>
+                                                        <><button key={cate._id} className='btn btn-secondary btn-sm mb-1'><Link to={`/filter/category/${cate.name}`}>{cate.name}</Link></button>{' '}</>
                                                     )
                                                 })}    
                                             </div>
@@ -189,7 +189,7 @@ const InfoFilm = () => {
                                         inactiveColor={'#ddd'}
                                         onChange={handleChange}  
                                     />
-                                    : <a href='/login' className="btn btn-danger w-200">Đăng nhập để đánh giá</a>
+                                    : <Link to='/login' className="btn btn-danger w-200">Đăng nhập để đánh giá</Link>
                                     }
                                     </div>
                                 </div>

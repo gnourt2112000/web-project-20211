@@ -57,7 +57,7 @@ const Filter = () => {
 
     
 
-    const filmsPerPage = 3;
+    const filmsPerPage = 15;
     const pagesVisited = pageNumber * filmsPerPage;
 
     const display = films
@@ -69,7 +69,7 @@ const Filter = () => {
           href={`/film/${film._id}`}
         >
           <div className="episode-latest">
-            <span>??/{film.numOfep}</span>
+            <span>{film.numOfep} tập</span>
           </div>
           <div>
             <img src={film.image} alt={film.title} />

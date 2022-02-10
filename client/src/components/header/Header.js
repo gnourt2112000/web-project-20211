@@ -31,8 +31,8 @@ const Header = () => {
                     <div className="d-flex flex-wrap tab-category">
                         {category.map(element =>{
                             return(
-                                <div key={element._id} className='tab-content'>
-                                    <Link to={`/filter/category/${element.name}`}>{element.name}</Link>
+                                <div type="button" onClick key={element._id} className='tab-content'>
+                                    <Link to={`/filter/category/${element.name}`}>{element.name} </Link>
                                 </div>
                             )
                         })}
@@ -42,7 +42,7 @@ const Header = () => {
                     <div className="d-flex flex-wrap tab-category">
                         {years.map(element =>{
                             return(
-                                <div key={element._id} className='tab-content'>
+                                <div  type="button" onClick key={element._id} className='tab-content'>
                                     <Link to={`/filter/year/${element.name}`}>{element._id}</Link>
                                 </div>
                             )
@@ -51,7 +51,7 @@ const Header = () => {
                 </TabPane>
                 <TabPane tab="Lọc phim" key="3" >
                     <Link to='/filter'>
-                        <button className='btn btn-secondary'>Đi đến trang lọc phim</button>
+                        <button onClick className='btn btn-secondary'>Đi đến trang lọc phim</button>
                     </Link>
                 </TabPane>
             </Tabs>

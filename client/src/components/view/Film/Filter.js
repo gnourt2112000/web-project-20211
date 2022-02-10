@@ -5,7 +5,7 @@ import axios from 'axios'
 import { apiUrl } from '../../contexts/constants'
 import '../../../components/view/BodyFilm/MoiCapNhat/Listfilm/style.css'
 import ReactPaginate from 'react-paginate'
-import { useParams } from 'react-router-dom'
+import { useParams,Link } from 'react-router-dom'
 const Filter = () => {
     let {id,follow} = useParams()
     console.log(id);
@@ -65,8 +65,8 @@ const Filter = () => {
     .map(film => (
       
       <div key={film._id} className="movie-item">
-        <a
-          href={`/film/${film._id}`}
+        <Link
+          to={`/film/${film._id}`}
         >
           <div className="episode-latest">
             <span>{film.numOfep} tập</span>
@@ -76,7 +76,7 @@ const Filter = () => {
           </div>
           <div className="score">{film.point}</div>
           <div className="name-movie">{film.title}</div>
-        </a>
+        </Link>
       </div>
     
     ))
@@ -91,8 +91,8 @@ const Filter = () => {
     return (
         <div className="d-flex justify-content-center">
             <div className='container-fix p-3'>
-                <div class="card" style={{backgroundColor : 'black', width:'150px'}}>
-                    <div class="card-header">
+                <div className="card" style={{backgroundColor : 'black', width:'fit-content'}}>
+                    <div className="card-header">
                         {id ? "Phim "+ id :"Trang lọc phim"}
                     </div>
                 </div>

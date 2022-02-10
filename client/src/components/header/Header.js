@@ -16,6 +16,7 @@ const Header = () => {
     let navigate = useNavigate()
     const goHome =() =>{
         navigate('/')
+        
     }
 
     useEffect(() => {

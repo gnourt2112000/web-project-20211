@@ -70,7 +70,7 @@ const FilmEpisodes = (props) => {
   const [data, setData] = useState({
     _id: "",
     title: "",
-    epNum: 0,
+    epNum: "",
     url: "",
   });
 
@@ -88,6 +88,7 @@ const FilmEpisodes = (props) => {
   const form = useForm({
     defaultValues: {
       title: data.title,
+      epNum: data.epNum,
       url: data.url,
     },
     resolver: yupResolver(schema),
@@ -116,7 +117,7 @@ const FilmEpisodes = (props) => {
   const handleSubmit = (values) => {
     const newEpisode = {
       title: values.title,
-      epNum: episodes?.length + 1,
+      epNum: values.epNum,
       url: values.url,
     };
     addEpisode(newEpisode)
@@ -149,12 +150,13 @@ const FilmEpisodes = (props) => {
           className={classes.form}
         >
           <InputField name="title" label="Title" form={form} />
-          <TextField
+          <InputField name="epNum" label="Episode Number" form={form} />
+          {/* <TextField
             label="Episode Number"
             value={episodes.length + 1}
             margin="normal"
             fullWidth
-          />
+          /> */}
           <InputField name="url" label="URL" form={form} />
 
           <Button

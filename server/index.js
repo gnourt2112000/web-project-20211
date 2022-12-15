@@ -7,7 +7,7 @@ const filmsRouter = require('./routes/films')
 const commentRouter = require('./routes/comment')
 const connectDB = async() => {
     try{
-        await mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.efmme.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{
+        await mongoose.connect(`mongodb+srv://gnourt:1234@cluster0.efmme.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{
             useNewUrlParser:true,
             useUnifiedTopology:true,
 
